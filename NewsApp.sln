@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsService", "NewsService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsApp", "NewsApp\NewsApp.csproj", "{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5ACA3C7-313B-491D-AFCA-DC5A43538411}"
+	ProjectSection(SolutionItems) = preProject
+		data.json = data.json
+		notes.txt = notes.txt
+		screenshot.png = screenshot.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
