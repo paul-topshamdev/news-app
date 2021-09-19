@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.223
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsService", "NewsService\NewsService.csproj", "{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsApp", "NewsApp\NewsApp.csproj", "{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05663BD6-D94F-4E8B-8BED-9D5FFFBBE3C5}
+	EndGlobalSection
+EndGlobal

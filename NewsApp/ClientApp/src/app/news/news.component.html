@@ -1,0 +1,18 @@
+<h1 id="tableLabel">News</h1>
+
+<p *ngIf="!newsList"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="newsList">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let news of newsList">
+      <td>{{ news.id }}</td>
+      <td>{{ news.title}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,1 @@
+﻿mongoimport --jsonArray --db news --collection news --file data.json
