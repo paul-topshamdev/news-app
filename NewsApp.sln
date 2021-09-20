@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31410.223
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsService", "NewsService\NewsService.csproj", "{D08FB1AC-0A2E-4150-AA66-B7D0690D38F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsApp", "NewsApp\NewsApp.csproj", "{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsSPA", "NewsSPA\NewsSPA.csproj", "{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5ACA3C7-313B-491D-AFCA-DC5A43538411}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,6 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		notes.txt = notes.txt
 		screenshot.png = screenshot.png
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{5CC569AD-EEB4-4C83-BB23-5FEE74779912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4BCC9FD6-CBF0-461D-80BD-4061786A2663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{C8000C9A-1D4C-47DC-B76C-CDFE037600EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.MongoDB", "DataAccess.MongoDB\DataAccess.MongoDB.csproj", "{246647D3-5A06-4E4E-97AF-C33AD5C4E359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +36,22 @@ Global
 		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BCF96E9-CFE5-4408-BE0A-7951A8C929A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC569AD-EEB4-4C83-BB23-5FEE74779912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC569AD-EEB4-4C83-BB23-5FEE74779912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC569AD-EEB4-4C83-BB23-5FEE74779912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC569AD-EEB4-4C83-BB23-5FEE74779912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BCC9FD6-CBF0-461D-80BD-4061786A2663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BCC9FD6-CBF0-461D-80BD-4061786A2663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BCC9FD6-CBF0-461D-80BD-4061786A2663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BCC9FD6-CBF0-461D-80BD-4061786A2663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8000C9A-1D4C-47DC-B76C-CDFE037600EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8000C9A-1D4C-47DC-B76C-CDFE037600EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8000C9A-1D4C-47DC-B76C-CDFE037600EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8000C9A-1D4C-47DC-B76C-CDFE037600EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246647D3-5A06-4E4E-97AF-C33AD5C4E359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246647D3-5A06-4E4E-97AF-C33AD5C4E359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246647D3-5A06-4E4E-97AF-C33AD5C4E359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246647D3-5A06-4E4E-97AF-C33AD5C4E359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

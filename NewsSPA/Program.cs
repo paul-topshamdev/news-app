@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NewsApp
+namespace NewsApp.NewsSPA
 {
     public class Program
     {

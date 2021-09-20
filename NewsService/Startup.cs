@@ -6,12 +6,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using NewsApp.DataAccess;
+using NewsApp.DataAccess.MongoDB;
+using NewsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NewsService
+namespace NewsApp.NewsService
 {
     public class Startup
     {
@@ -25,6 +28,16 @@ namespace NewsService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions();
+
+            services.AddSingleton<IDatabaseConfig>(new DatabaseConfig
+            {
+                ConnectionString = Configuration.GetConnectionString("mongodb")
+            });
+
+            // Data access.
+            services.AddSingleton<INewsDataAccess, NewsDataAccess>();
+
             services.AddCors();
 
             services.AddControllers();
