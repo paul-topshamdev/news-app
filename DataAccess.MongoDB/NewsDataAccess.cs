@@ -3,6 +3,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using NewsApp.Models;
 using NewsApp.Shared;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -19,17 +20,29 @@ namespace NewsApp.DataAccess.MongoDB
             db = new MongoClient(databaseConfig.ConnectionString).GetDatabase(dbName);
         }
 
-        public async Task<News> GetNewsById(string id)
+        public async Task<News> GetNewsByIdAsync(string id)
         {
             var collection = db.GetCollection<BsonDocument>(collectionName);
             var filter = "{ _id: ObjectId('" + id + "') }";
 
-            var bsonDocument = await collection.Find(filter).SingleOrDefaultAsync();
+            try
+            {
+                var bsonDocument = await collection.Find(filter).SingleAsync();
 
-            return ConvertBsonDocumentToNews(bsonDocument);
+                return ConvertBsonDocumentToNews(bsonDocument);
+            }
+            catch (InvalidOperationException invalidOperationException)
+            {
+                if (invalidOperationException.Message.Contains("Sequence contains no elements"))
+                {
+                    throw new NewsNotFoundException(innerException: invalidOperationException);
+                }
+
+                throw;
+            }
         }
 
-        public async Task<IList<News>> GetNewsList()
+        public async Task<IList<News>> GetNewsListAsync()
         {
             var collection = db.GetCollection<BsonDocument>(collectionName);
 

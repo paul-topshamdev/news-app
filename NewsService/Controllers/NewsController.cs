@@ -23,14 +23,14 @@ namespace NewsApp.NewsService.Controllers
         [HttpGet]
         public async Task<IList<News>> Get()
         {
-            return await newsDataAccess.GetNewsList();
+            return await newsDataAccess.GetNewsListAsync();
         }
 
         [HttpGet]
         [Route("{id}")]
         public async Task<News> GetById([FromRoute] string id)
         {
-            return await newsDataAccess.GetNewsById(id);
+            return await newsDataAccess.GetNewsByIdAsync(id);
         }
     }
 }

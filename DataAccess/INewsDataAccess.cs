@@ -6,7 +6,7 @@ namespace NewsApp.DataAccess
 {
     public interface INewsDataAccess
     {
-        Task<News> GetNewsById(string id);
-        Task<IList<News>> GetNewsList();
+        Task<News> GetNewsByIdAsync(string id);
+        Task<IList<News>> GetNewsListAsync();
     }
 }
