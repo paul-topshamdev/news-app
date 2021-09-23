@@ -12,8 +12,11 @@ export class NewsService {
 
   public getNewsList(): Observable<News[]> {
 
-    console.log("NewService.getNewsList called");
-
     return this.httpClient.get<News[]>(this.newsServiceBaseUrl);
+  }
+
+  public getNewsById(id: string): Observable<News> {
+
+    return this.httpClient.get<News>(this.newsServiceBaseUrl + '/' + id);
   }
 }

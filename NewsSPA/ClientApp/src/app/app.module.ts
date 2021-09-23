@@ -11,6 +11,9 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewsComponent } from './components/news/news.component';
 import { PizzaComponent } from './components/pizza/pizza.component';
+import { NewsListComponent } from './components/news/news-list/news-list.component';
+import { NewsListItemComponent } from './components/news/news-list/news-list-item/news-list-item.component';
+import { NewsDetailsComponent } from './components/news/news-details/news-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PizzaComponent } from './components/pizza/pizza.component';
     NavMenuComponent,
     HomeComponent,
     NewsComponent,
-    PizzaComponent
+    PizzaComponent,
+    NewsListComponent,
+    NewsListItemComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -27,7 +33,8 @@ import { PizzaComponent } from './components/pizza/pizza.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'news', component: NewsComponent },
-      { path: 'pizza', component: PizzaComponent }
+      { path: 'pizza', component: PizzaComponent },
+      { path: 'news/:id', component: NewsDetailsComponent }
     ])
   ],
   providers: [NewsService],
