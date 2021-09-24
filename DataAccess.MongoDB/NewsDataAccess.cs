@@ -65,6 +65,25 @@ namespace NewsApp.DataAccess.MongoDB
             return newsList;
         }
 
+        public Task<string> AddNews(News news)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> UpdateNews(News news)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<long> DeleteNews(string id)
+        {
+            var collection = db.GetCollection<BsonDocument>(collectionName);
+
+            var deleteResult = await collection.DeleteOneAsync(id);
+
+            return deleteResult.DeletedCount;
+        }
+
         #region Private Methods
 
         private static News ConvertBsonDocumentToNews(BsonDocument bsonDocument)
