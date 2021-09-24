@@ -1,5 +1,6 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
+
 import { NewsService } from './news.service';
 import { News } from '../../models/news/news';
 
@@ -67,4 +68,29 @@ describe('NewsService', () => {
     httpClientMock.verify();
 
   });
+
+  //it(`should fetch news as Observable<News>`, () => {
+
+  //  const newsId: string = "507f1f77bcf86cd799439011";
+  //  const newsTitle: string = "Sausages";
+
+  //  const newsMockData: News = {
+  //      id: newsId,
+  //      title: newsTitle,
+  //      content: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  //  };
+
+  //  newsService.getNewsById(newsId)
+  //    .subscribe((news: News) => {
+  //      expect(news.title).toBe(newsTitle);
+  //      expect(news.title).not.toBe("Burgers"); // Check that not anything can pass.  
+  //    });
+
+  //  let testRequest: TestRequest = httpClientMock.expectOne(newsServiceBaseUrl + "/" + newsId);
+  //  expect(testRequest.request.method).toBe("GET");
+
+  //  testRequest.flush(newsMockData);
+  //  httpClientMock.verify();
+
+  //});
 });

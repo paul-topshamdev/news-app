@@ -10,7 +10,7 @@ import { News } from '../../../models/news/news';
 })
 export class NewsListComponent implements OnInit {
 
-  private newsList: News[];
+  public newsList: News[];
 
   constructor(@Inject(NewsService) private newsService: NewsService) { }
 

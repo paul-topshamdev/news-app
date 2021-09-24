@@ -25,7 +25,6 @@ export class NewsDetailsComponent implements OnInit {
       this.newsService.getNewsById(id).subscribe((data: News) => {
         this.news = data;
       }, error => console.error(error));
-
-    })
+    });
   }
 }
