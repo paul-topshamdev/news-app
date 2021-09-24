@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { NewsService } from '../../services/news/news.service';
+import { News } from '../../models/news/news';
 
 @Component({
   selector: 'app-news',
@@ -8,15 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class NewsComponent {
   public newsList: News[];
 
-  constructor(http: HttpClient, @Inject('API_BASE_URL') baseUrl: string) {
-    http.get<News[]>(baseUrl + 'news').subscribe(result => {
+  constructor(@Inject(NewsService) private newsService: NewsService) {
+
+    this.newsService.getNewsList().subscribe(result => {
       this.newsList = result;
     }, error => console.error(error));
   }
-}
-
-interface News {
-  id: string;
-  title: string;
-  content: string;
 }

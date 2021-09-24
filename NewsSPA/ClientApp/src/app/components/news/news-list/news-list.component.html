@@ -1,0 +1,13 @@
+<h1>News</h1>
+
+<p *ngIf="!newsList"><em>Loading...</em></p>
+
+<div *ngIf="newsList">
+
+  <div *ngFor="let news of newsList">
+
+    <news-list-item [news]="news"></news-list-item>
+
+  </div>
+
+</div>

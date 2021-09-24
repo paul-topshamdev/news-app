@@ -16,8 +16,8 @@ const providers = [
     deps: []
   },
   {
-    provide: "API_BASE_URL",
-    useValue: environment.apiRoot
+    provide: "NEWS_API_BASE_URL",
+    useValue: environment.newsServiceBaseUrl
   }
 ];
 
